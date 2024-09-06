@@ -6,8 +6,8 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from sklearn.model_selection import train_test_split
 
 # Step 1: Data Preparation
-zip_file_path = "C:\\Users\\daaaniyaaa\\Downloads\\archive.zip"
-extract_folder = "C:\\Users\\daaaniyaaa\\Downloads\\ct_data"
+zip_file_path = "path1"
+extract_folder = "path2"
 
 # Extract the zip file
 with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
@@ -63,7 +63,7 @@ history = model.fit(
     validation_steps=validation_generator.samples // validation_generator.batch_size
 )
 # Save the trained model
-model.save('C:\\Users\\daaaniyaaa\\Downloads\\saving.h5')
+model.save('modelname.h5')
 
 # Step 5: Model Evaluation
 test_loss, test_acc = model.evaluate(validation_generator, verbose=2)
