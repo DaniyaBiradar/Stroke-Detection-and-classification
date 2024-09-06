@@ -7,7 +7,6 @@ This project uses machine learning to predict stroke from ct images of the brain
 - Data preprocessing and cleaning.
 - Machine learning models for stroke prediction.
 - Performance evaluation using accuracy, precision, and recall.
-- Simple user interface for predictions.
 
 ## Dataset
 (https://www.kaggle.com/datasets/noshintasnia/brain-stroke-prediction-ct-scan-image-dataset)
