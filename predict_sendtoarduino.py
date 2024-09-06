@@ -6,7 +6,7 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.vgg16 import preprocess_input
 
 # Load the trained model
-model = load_model('C:\\Users\\daaaniyaaa\\Downloads\\saving.h5')
+model = load_model('modelname.h5')
 
 # Function to preprocess the input image
 def preprocess_image(img_path, target_size=(150, 150)):
@@ -32,7 +32,7 @@ def predict_image_class(img_path, model):
         return "Ischemic"
 
 # Example usage
-image_path = image_path = 'C:\\Users\\daaaniyaaa\\Downloads\\Stroke_CT03.png'
+image_path = image_path = 'path.png'
 prediction = predict_image_class(image_path, model)
 print("Prediction:", prediction)
 
@@ -41,7 +41,7 @@ arduino = serial.Serial(arduino_port, 9600)
 time.sleep(2)  # Allow time for the Arduino to initialize
 
 # Send prediction result to Arduino
-image_path = 'C:\\Users\\daaaniyaaa\\Downloads\\Stroke_CT03.png'  # Adjust the image path
+image_path = 'path.png'  # Adjust the image path
 prediction = predict_image_class(image_path, model)
 arduino.write(prediction.encode())
 
